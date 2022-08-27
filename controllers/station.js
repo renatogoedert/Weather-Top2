@@ -9,7 +9,7 @@ const station = {
     logger.debug("Station id = ", stationId);
     const viewData = {
       title: "Station",
-      station: stationStore.getStation(stationId)
+      station: stationStore.getStation(stationId),
     };
     response.render("station", viewData);
   },
@@ -20,7 +20,7 @@ const station = {
     logger.debug(`Deleting Reading ${readingId} from Station ${stationId}`);
     stationStore.removeReading(stationId, readingId);
     response.redirect("/station/" + stationId);
-  }
+  },
 };
 
 module.exports = station;
