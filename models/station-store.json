@@ -6,14 +6,6 @@
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "readings": [
         {
-          "id": "02",
-          "code": 800,
-          "temperature": 0.5,
-          "windSpeed": 3.5,
-          "pressure": 1002,
-          "windDirection": 90
-        },
-        {
           "id": "03",
           "code": 600,
           "temperature": 6,
@@ -28,8 +20,17 @@
           "windSpeed": 1,
           "pressure": 1005,
           "windDirection": 101
+        },
+        {
+          "id": "22d27a40-2ba9-11ed-a88c-2b9f472497eb",
+          "code": "300",
+          "temperature": "25.3",
+          "windSpeed": "20",
+          "pressure": "1005",
+          "windDirection": "100"
         }
-      ]
+      ],
+      "duration": null
     },
     {
       "id": "05",
