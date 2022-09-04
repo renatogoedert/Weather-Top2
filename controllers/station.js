@@ -3,14 +3,19 @@
 const logger = require("../utils/logger");
 const stationStore = require("../models/station-store");
 const uuid = require("uuid");
+const analytics = require("../utils/analytics");
 
 const station = {
   index(request, response) {
     const stationId = request.params.id;
     logger.debug("Station id = ", stationId);
+    const station = stationStore.getStation(stationId)
     const viewData = {
       title: "Station",
-      station: stationStore.getStation(stationId),
+      station: station,
+      stationSummary: {
+        latestReading : analytics.getLatestReading(station)
+    }
     };
     response.render("station", viewData);
   },
