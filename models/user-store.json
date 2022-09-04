@@ -20,6 +20,13 @@
       "email": "aaa",
       "password": "aaa",
       "id": "4e502a10-2ba8-11ed-a9a9-79ee282dacdd"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "id": "619de520-2c35-11ed-868b-d1a7e1e7dd08"
     }
   ]
 }

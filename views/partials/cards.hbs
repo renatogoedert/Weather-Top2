@@ -1,52 +1,54 @@
+{{#each readings}}
+  {{#if @last}}
+    <div class="ui five doubling inverted cards">
 
-<div class="ui five doubling inverted cards">
-
-  <div class="card">
-    <div class="content">
-      <i class="right floated huge"></i>
-      <h3 class="ui header">{{name}}</h3>
-    </div>
-  </div>
-  
-  
-  <div class="card">
-    <div class="content">
-      <i class="right floated huge"></i>
-      <h3 class="ui header">Weather</h3>
-      <div class="description">
-        <div class="ui text"> {{stationSummary.latestReading.code}}</div>
+      <div class="card">
+        <div class="content">
+          <i class="right floated huge"></i>
+          <h3 class="ui header">{{../name}}</h3>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="content">
-      <i class="right floated huge"></i>
-      <h3 class="ui header">Temp</h3>
-      <div class="description">
-        <div class="ui text"> {{_valueA}}</div>
+      <div class="card">
+        <div class="content">
+          <i class="right floated huge"></i>
+          <h3 class="ui header">Weather</h3>
+          <div class="description">
+            <div class="ui text"> {{code}}</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="content">
-      <i class="right floated huge"></i>
-      <h3 class="ui header">Wind</h3>
-      <div class="description">
-        <div class="ui text"> {{_valueA}}</div>
+      <div class="card">
+        <div class="content">
+          <i class="right floated huge"></i>
+          <h3 class="ui header">Temp</h3>
+          <div class="description">
+            <div class="ui text">{{temperature}} </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="content">
-      <i class="right floated huge"></i>
-      <h3 class="ui header">Pressure</h3>
-      <div class="description">
-        <div class="ui text"> {{_valueA}}</div>
+      <div class="card">
+        <div class="content">
+          <i class="right floated huge"></i>
+          <h3 class="ui header">Wind</h3>
+          <div class="description">
+            <div class="ui text"> {{windSpeed}}</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-</div>
+      <div class="card">
+        <div class="content">
+          <i class="right floated huge"></i>
+          <h3 class="ui header">Pressure</h3>
+          <div class="description">
+            <div class="ui text"> {{pressure}}</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  {{/if}}
+{{/each}}
