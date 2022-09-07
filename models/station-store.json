@@ -53,7 +53,8 @@
           "pressure": 1000,
           "windDirection": 102
         }
-      ]
+      ],
+      "duration": null
     }
   ]
 }

@@ -1,50 +1,64 @@
-{{#each readings}}
+{{#each readings}}   
   {{#if @last}}
-    <div class="ui five doubling inverted cards">
+    <div class="ui five doubling small inverted cards">
 
-      <div class="card">
+      <div class=" card">
         <div class="content">
-          <i class="right floated huge"></i>
+          <i class="right floated huge marker violet icon"></i>
           <h3 class="ui header">{{../name}}</h3>
         </div>
       </div>
 
       <div class="card">
         <div class="content">
-          <i class="right floated huge"></i>
+          <i class="right floated huge sun red icon"></i>
           <h3 class="ui header">Weather</h3>
-          <div class="description">
-            <div class="ui text"> {{code}}</div>
+          <div class="description ui two column grid">
+            <div class="column">
+             <p class="ui small text"> {{@root.analytics.codeToWeather}}</p>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="card">
         <div class="content">
-          <i class="right floated huge"></i>
+          <i class="right floated huge temperature low blue icon"></i>
           <h3 class="ui header">Temp</h3>
-          <div class="description">
-            <div class="ui text">{{temperature}} </div>
+          <div class="description ui two column grid">
+            <div class="column">
+            <p class="ui text">{{temperature}} C </p>
+            <p class="ui text">{{@root.analytics.ceToFa}} F </p>
+            </div>
+            <div class="column">
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="card">
+      <div class=" card">
         <div class="content">
-          <i class="right floated huge"></i>
+          <i class="right floated huge wind green icon"></i>
           <h3 class="ui header">Wind</h3>
-          <div class="description">
-            <div class="ui text"> {{windSpeed}}</div>
+          <div class="description ui two column grid">
+            <div class="column">
+              <div class="ui text"> {{windSpeed}}</div>
+             <p class="ui text">{{@root.analytics.windInBf}} bft</p>
+             <p class="ui text">{{@root.analytics.windDirectionString}} </p>
+             <p class="ui text">{{@root.analytics.windChill}} </p>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="card">
         <div class="content">
-          <i class="right floated huge"></i>
+          <i class="right floated huge centos orange icon"></i>
           <h3 class="ui header">Pressure</h3>
-          <div class="description">
-            <div class="ui text"> {{pressure}}</div>
+          <div class="description ui two column grid">
+            <div class="column">
+            <p class="ui text"> {{pressure}}</p>
+            </div>
           </div>
         </div>
       </div>

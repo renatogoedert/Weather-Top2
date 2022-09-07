@@ -4,6 +4,7 @@ const _ = require("lodash");
 const JsonStore = require("./json-store");
 const analytics = require("../utils/analytics");
 
+
 const stationStore = {
   store: new JsonStore("./models/station-store.json", {
     stationCollection: []
@@ -41,13 +42,6 @@ const stationStore = {
   addReading(id, reading) {
     const station = this.getStation(id);
     station.readings.push(reading);
-
-    let duration = 0;
-    for (let i = 0; i < station.readings.length; i++) {
-      duration += station.readings[i].duration;
-    }
-
-    station.duration = duration;
     this.store.save();
   },
 

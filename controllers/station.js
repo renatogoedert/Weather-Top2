@@ -9,17 +9,21 @@ const station = {
   index(request, response) {
     const stationId = request.params.id;
     logger.debug("Station id = ", stationId);
-    const station = stationStore.getStation(stationId)
+    const station = stationStore.getStation(stationId);
     const viewData = {
       title: "Station",
       station: station,
-      stationSummary: {
-        latestReading : analytics.getLatestReading(station)
-    }
+      analytics: {
+        codeToWeather: analytics.codeToWeather(station),
+        ceToFa: analytics.ceToFa(station),
+        windInBf: analytics.windInBf(station),
+        windDirectionString: analytics.windDirectionString(station),
+        windChill: analytics.windChill(station),
+      },
     };
     response.render("station", viewData);
   },
-  
+
   addReading(request, response) {
     const stationId = request.params.id;
     const station = stationStore.getStation(stationId);

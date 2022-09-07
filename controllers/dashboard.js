@@ -4,14 +4,19 @@ const accounts = require("./accounts.js");
 const logger = require("../utils/logger");
 const stationStore = require("../models/station-store");
 const uuid = require("uuid");
+const analytics = require("../utils/analytics");
 
 const dashboard = {
   index(request, response) {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
+    const stations = stationStore.getUserStations(loggedInUser.id);
     const viewData = {
       title: "Weather Top 2 Dashboard",
-      stations: stationStore.getUserStations(loggedInUser.id)
+      stations: stations,
+      analytics: {
+        
+      },
     };
     logger.info("about to render", stationStore.getAllStation());
     response.render("dashboard", viewData);
@@ -26,17 +31,16 @@ const dashboard = {
 
   addStation(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
-    const newPlayList = {
+    const newStation = {
       id: uuid.v1(),
       userid: loggedInUser.id,
-      title: request.body.title,
-      songs: []
+      name: request.body.name,
+      readings: [],
     };
-    logger.debug("Creating a new Station", newPlayList);
-    stationStore.addStation(newPlayList);
+    logger.debug("Creating a new Station", newStation);
+    stationStore.addStation(newStation);
     response.redirect("/dashboard");
-  }
+  },
 };
 
 module.exports = dashboard;
- 
