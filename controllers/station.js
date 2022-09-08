@@ -16,9 +16,21 @@ const station = {
       analytics: {
         codeToWeather: analytics.codeToWeather(station),
         ceToFa: analytics.ceToFa(station),
+        maxTemp: analytics.maxTemp(station),
+        minTemp: analytics.minTemp(station),
         windInBf: analytics.windInBf(station),
+        maxWind: analytics.maxWind(station),
+        minWind: analytics.minWind(station),
         windDirectionString: analytics.windDirectionString(station),
         windChill: analytics.windChill(station),
+        maxPressure: analytics.maxPressure(station),
+        minPressure: analytics.minPressure(station),
+        tempTrendUp: analytics.tempTrendUp(station),
+        tempTrendDown: analytics.tempTrendDown(station),
+        windTrendUp: analytics.windTrendUp(station),
+        windTrendDown: analytics.windTrendDown(station),
+        pressureTrendUp: analytics.pressureTrendUp(station),
+        pressureTrendDown: analytics.pressureTrendDown(station),
       },
     };
     response.render("station", viewData);
@@ -34,6 +46,7 @@ const station = {
       windSpeed: request.body.windSpeed,
       pressure: request.body.pressure,
       windDirection: request.body.windDirection,
+      date: new Date().toUTCString(),
     };
     logger.debug("New Reading = ", newReading);
     stationStore.addReading(stationId, newReading);

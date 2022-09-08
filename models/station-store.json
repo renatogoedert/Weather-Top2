@@ -4,6 +4,8 @@
       "id": "01",
       "name": "Tramore",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "latitude": 52.16235,
+      "longitude": -7.15244,
       "readings": [
         {
           "id": "03",
@@ -11,7 +13,8 @@
           "temperature": 6,
           "windSpeed": 2,
           "pressure": 1004,
-          "windDirection": 96
+          "windDirection": 96,
+          "date": "Wed, 06 Jul 2022 14:33:45 GMT"
         },
         {
           "id": "04",
@@ -19,15 +22,8 @@
           "temperature": 8,
           "windSpeed": 1,
           "pressure": 1005,
-          "windDirection": 101
-        },
-        {
-          "id": "22d27a40-2ba9-11ed-a88c-2b9f472497eb",
-          "code": "300",
-          "temperature": "25.3",
-          "windSpeed": "20",
-          "pressure": "1005",
-          "windDirection": "100"
+          "windDirection": 101,
+          "date": "Wed, 07 Sep 2022 20:07:29 GMT"
         }
       ],
       "duration": null
@@ -36,6 +32,8 @@
       "id": "05",
       "name": "Dunmore",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "latitude": 52.1499994,
+      "longitude": -6.9833294,
       "readings": [
         {
           "id": "06",
@@ -43,7 +41,8 @@
           "temperature": 8,
           "windSpeed": 1,
           "pressure": 999,
-          "windDirection": 98
+          "windDirection": 98,
+          "date": "Wed, 06 Jul 2022 11:34:23 GMT"
         },
         {
           "id": "07",
@@ -51,7 +50,8 @@
           "temperature": 0.5,
           "windSpeed": 3.5,
           "pressure": 1000,
-          "windDirection": 102
+          "windDirection": 102,
+          "date": "Wed, 07 Sep 2022 14:12:32 GMT"
         }
       ],
       "duration": null

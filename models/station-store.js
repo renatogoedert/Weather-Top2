@@ -58,12 +58,6 @@ const stationStore = {
     return readings[0];
   },
 
-  updateReading(reading, updatedReading) {
-    reading.title = updatedReading.title;
-    reading.artist = updatedReading.artist;
-    reading.duration = updatedReading.duration;
-    this.store.save();
-  }
 };
 
 module.exports = stationStore;

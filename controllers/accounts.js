@@ -6,11 +6,15 @@ const uuid = require("uuid");
 
 const accounts = {
   index(request, response) {
+    logger.info("Accounts rendering");
+    const loggedInUser = accounts.getCurrentUser(request);
     const viewData = {
-      title: "Login or Signup"
+      title: "Accounts details",
+      user: loggedInUser,
     };
-    response.render("index", viewData);
+    response.render("account", viewData);
   },
+
 
   login(request, response) {
     const viewData = {
@@ -46,8 +50,16 @@ const accounts = {
       logger.info(`logging in ${user.email}`);
       response.redirect("/dashboard");
     } else {
-      response.redirect("/login");
+      response.redirect("/");
     }
+  },
+  
+  updateUser(request, response) {
+    const user = accounts.getCurrentUser(request);
+    const updatedUser = request.body
+    userstore.updateUser(user, updatedUser)
+      response.redirect("/account");
+    
   },
 
   getCurrentUser(request) {
