@@ -31,6 +31,7 @@ const dashboard = {
 
   addStation(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
+    if (request.body.latitude <= 90 && request.body.latitude >= -90 && request.body.longitude <= 180 && request.body.longitude >= -180 && request.body.latitude != "" && request.body.longitude != ""){
     const newStation = {
       id: uuid.v1(),
       userid: loggedInUser.id,
@@ -42,6 +43,8 @@ const dashboard = {
     logger.debug("Creating a new Station", newStation);
     stationStore.addStation(newStation);
     response.redirect("/dashboard");
+    } else{response.redirect("/dashboard");}
+    
   },
 };
 

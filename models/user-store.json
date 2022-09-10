@@ -4,8 +4,8 @@
       "email": "homer@simpson.com",
       "password": "123",
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "firstName": "a",
-      "lastName": "e"
+      "firstName": "Homer",
+      "lastName": "Simpson"
     },
     {
       "firstName": "marge",
@@ -13,6 +13,13 @@
       "email": "marge@simpson.com",
       "password": "secret",
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
+    },
+    {
+      "firstName": "Renato Francisco",
+      "lastName": "Goedert",
+      "email": "aaa",
+      "password": "aaa",
+      "id": "7c684450-310c-11ed-85d4-1f3cf713a94b"
     }
   ]
 }

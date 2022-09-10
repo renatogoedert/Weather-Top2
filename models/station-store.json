@@ -9,24 +9,74 @@
       "readings": [
         {
           "id": "03",
-          "code": 600,
+          "code": 500,
           "temperature": 6,
           "windSpeed": 2,
           "pressure": 1004,
           "windDirection": 96,
-          "date": "Wed, 06 Jul 2022 14:33:45 GMT"
+          "date": "Wed, 06 Jul 2022 14:33:45 GMT",
+          "tempTrend": [],
+          "trendLabels": []
         },
         {
           "id": "04",
-          "code": 700,
+          "code": 500,
           "temperature": 8,
           "windSpeed": 1,
           "pressure": 1005,
           "windDirection": 101,
-          "date": "Wed, 07 Sep 2022 20:07:29 GMT"
+          "date": "Wed, 07 Sep 2022 20:07:29 GMT",
+          "tempTrend": [
+            20,
+            19,
+            16,
+            15,
+            20,
+            21,
+            19,
+            15
+          ],
+          "trendLabels": [
+            "10/2/2022",
+            "11/2/2022",
+            "12/2/2022",
+            "13/2/2022",
+            "14/2/2022",
+            "15/2/2022",
+            "16/2/2022",
+            "21/2/2022"
+          ]
+        },
+        {
+          "id": "83833c00-311a-11ed-b875-4d432bbf7bdb",
+          "date": "Sat, 10 Sep 2022 15:09:06 GMT",
+          "code": 802,
+          "temperature": 18.2,
+          "windSpeed": 3.6,
+          "pressure": 1018,
+          "windDirection": 170,
+          "tempTrend": [
+            17.43,
+            15.76,
+            17.91,
+            16.36,
+            16.39,
+            14.36,
+            16.11,
+            16.27
+          ],
+          "trendLabels": [
+            "10/9/2022",
+            "11/9/2022",
+            "12/9/2022",
+            "13/9/2022",
+            "14/9/2022",
+            "15/9/2022",
+            "16/9/2022",
+            "17/9/2022"
+          ]
         }
-      ],
-      "duration": null
+      ]
     },
     {
       "id": "05",
@@ -37,7 +87,7 @@
       "readings": [
         {
           "id": "06",
-          "code": 700,
+          "code": 600,
           "temperature": 8,
           "windSpeed": 1,
           "pressure": 999,
@@ -46,15 +96,43 @@
         },
         {
           "id": "07",
-          "code": 200,
+          "code": 801,
           "temperature": 0.5,
           "windSpeed": 3.5,
           "pressure": 1000,
           "windDirection": 102,
           "date": "Wed, 07 Sep 2022 14:12:32 GMT"
+        },
+        {
+          "id": "5a203630-3118-11ed-bd53-75588a456a6a",
+          "date": "Sat, 10 Sep 2022 14:53:37 GMT",
+          "code": 802,
+          "temperature": 18.81,
+          "windSpeed": 3.6,
+          "pressure": 1018,
+          "windDirection": 170,
+          "tempTrend": [
+            17.89,
+            15.92,
+            18.14,
+            16.8,
+            16.66,
+            14.56,
+            16.14,
+            16.53
+          ],
+          "trendLabels": [
+            "10/8/2022",
+            "11/8/2022",
+            "12/8/2022",
+            "13/8/2022",
+            "14/8/2022",
+            "15/8/2022",
+            "16/8/2022",
+            "17/8/2022"
+          ]
         }
-      ],
-      "duration": null
+      ]
     }
   ]
 }

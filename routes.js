@@ -25,6 +25,7 @@ router.post("/dashboard/addstation", dashboard.addStation);
 router.get("/about", about.index);
 router.get("/station/:id", station.index);
 router.post("/station/:id/addreading", station.addReading);
+router.post("/station/:id/addreport", station.addreport);
 router.get("/station/:id/deletereading/:readingid", station.deleteReading);
 
 module.exports = router;

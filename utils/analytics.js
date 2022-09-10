@@ -149,22 +149,38 @@ const analytics = {
     if (station.readings.length > 0) {
       let reading = this.getLatestReading(station);
       let code = reading.code;
-      if (code == 100) {
-        return "Clear";
-      } else if (code == 200) {
-        return "Partial clouds";
-      } else if (code == 300) {
-        return "Cloudy";
-      } else if (code == 400) {
-        return "Light Showers";
-      } else if (code == 500) {
-        return "Heavy Showers";
-      } else if (code == 600) {
+      if (code >= 200 && code < 300) {
+        return "Thunderstorm";
+      } else if (code >= 300 && code < 400) {
+        return "Drizzle";
+      } else if (code >= 500 && code < 600) {
         return "Rain";
-      } else if (code == 700) {
+      } else if (code >= 600 && code < 700) {
         return "Snow";
-      } else {
-        return "Thunder";
+      } else if ( code > 800) {
+        return "Clouds";
+      } else if (code == 800) {
+        return "Clear sky";
+      } else if (code == 701) {
+        return "Mist";
+      } else if (code == 711) {
+        return "Smoke";
+      } else if (code == 721) {
+        return "Haze";
+      } else if (code == 731) {
+        return "Dust";
+      } else if (code == 741) {
+        return "Fog";
+      } else if (code == 751) {
+        return "Sand";
+      } else if (code == 761) {
+        return "Dust";
+      } else if (code == 762) {
+        return "Ash";
+      } else if (code == 771) {
+        return "Squall";
+      } else if (code == 781) {
+        return "Tornado";
       }
     }
   },
@@ -173,7 +189,7 @@ const analytics = {
     if (station.readings.length > 0) {
       let reading = this.getLatestReading(station);
       let temperature = reading.temperature;
-      return ((temperature * 9) / 5 + 32);
+      return ((temperature * 9) / 5 + 32).toFixed(1);
     }
   },
 
