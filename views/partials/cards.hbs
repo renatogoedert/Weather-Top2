@@ -1,52 +1,101 @@
+{{#each readings}}   
+  {{#if @last}}
+    <div class="ui five doubling small inverted cards">
 
-<div class="ui five doubling inverted cards">
-
-  <div class="card">
-    <div class="content">
-      <i class="right floated huge"></i>
-      <h3 class="ui header">{{name}}</h3>
-    </div>
-  </div>
-  
-  
-  <div class="card">
-    <div class="content">
-      <i class="right floated huge"></i>
-      <h3 class="ui header">Weather</h3>
-      <div class="description">
-        <div class="ui text"> {{stationSummary.latestReading.code}}</div>
+      <div class=" card">
+        <div class="content">
+          <i class="right floated huge marker violet icon"></i>
+          <h3 class="ui header">{{../name}}</h3>
+          <div class="description ui two column grid">
+            <div class="column">
+              <p class="ui small text">Lat {{../latitude}}</p>
+              <p class="ui small text">Long {{../longitude}}</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="content">
-      <i class="right floated huge"></i>
-      <h3 class="ui header">Temp</h3>
-      <div class="description">
-        <div class="ui text"> {{_valueA}}</div>
+      <div class="card">
+        <div class="content">
+          <i class="right floated huge sun red icon"></i>
+          <h3 class="ui header">Weather</h3>
+          <div class="description ui two column grid">
+            <div class="column">
+             <p class="ui small text"> {{@root.analytics.codeToWeather}}</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="content">
-      <i class="right floated huge"></i>
-      <h3 class="ui header">Wind</h3>
-      <div class="description">
-        <div class="ui text"> {{_valueA}}</div>
+      <div class="card">
+        <div class="content">
+          <i class="right floated huge temperature low blue icon"></i>
+          <h3 class="ui header">Temp</h3>
+          <div class="description ui two column grid">
+            <div class="column">
+              <p class="ui text">{{temperature}} °C </p>
+              <p class="ui text">{{@root.analytics.ceToFa}} °F </p>
+              <p class="ui text">Max {{@root.analytics.maxTemp}} °C</p>
+              <p class="ui text">Min {{@root.analytics.minTemp}} °C</p>
+            </div>
+            <div class="column">
+              {{#if @root.analytics.tempTrendUp}}
+                <i class="right floated huge arrow up blue icon"></i>
+              {{/if}}
+              {{#if @root.analytics.tempTrendDown}}
+                <i class="right floated huge arrow down blue icon"></i>
+              {{/if}}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="content">
-      <i class="right floated huge"></i>
-      <h3 class="ui header">Pressure</h3>
-      <div class="description">
-        <div class="ui text"> {{_valueA}}</div>
+      <div class=" card">
+        <div class="content">
+          <i class="right floated huge wind green icon"></i>
+          <h3 class="ui header">Wind</h3>
+          <div class="description ui two column grid">
+            <div class="column">
+              <p class="ui text">{{@root.analytics.windInBf}} bft</p>
+              <p class="ui text">{{@root.analytics.windDirectionString}} </p>
+              <p class="ui text">Feels Like {{@root.analytics.windChill}} </p>
+              <p class="ui text">Max {{@root.analytics.maxWind}} </p>
+              <p class="ui text">Min {{@root.analytics.minWind}} </p>
+          </div>
+          <div class="column">
+              {{#if @root.analytics.windTrendUp}}
+                <i class="right floated huge arrow up green icon"></i>
+              {{/if}}
+              {{#if @root.analytics.windTrendDown}}
+                <i class="right floated huge arrow down green icon"></i>
+              {{/if}}
+            </div>
+        </div>
       </div>
-    </div>
-  </div>
+      </div>
 
-</div>
+      <div class="card">
+        <div class="content">
+          <i class="right floated huge centos orange icon"></i>
+          <h3 class="ui header">Pressure</h3>
+          <div class="description ui two column grid">
+            <div class="column">
+              <p class="ui text"> {{pressure}} hpa</p>
+              <p class="ui text">Max {{@root.analytics.maxPressure}} </p>
+              <p class="ui text">Min {{@root.analytics.minPressure}} </p>
+            </div>
+            <div class="column">
+              {{#if @root.analytics.pressureTrendUp}}
+                <i class="right floated huge arrow up orange icon"></i>
+              {{/if}}
+              {{#if @root.analytics.pressureTrendDown}}
+                <i class="right floated huge arrow down orange icon"></i>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  {{/if}}
+{{/each}}

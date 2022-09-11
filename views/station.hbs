@@ -1,9 +1,13 @@
 {{> menu}}
 
 <section class="ui center aligned middle aligned segment">
-  <h2 class="ui header">
-    {{station.name}}
+ <h2 class="ui header">
+                
+    {{> cards station}}
+  
   </h2>
   {{> listreadings}}
+  {{> chart station}}
   {{> addreadings}}
+  {{> addreport}}
 </section>
